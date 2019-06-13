@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.022907985490406773 -0.9996670891863066 -0.011871604716632914 0.956522071222813
-  position -0.41733457112329575 0.2697268718080659 0.5589828892942439
+  orientation 0.006337117842889904 -0.999975037556644 0.003124932164629862 0.9162698037081772
+  position -0.8934584285191028 0.1929111866033708 0.9135247342844658
 }
 TexturedBackground {
 }
@@ -55,12 +55,12 @@ Robot {
         }
         RotationalMotor {
           name "motor_right"
-          maxVelocity 50
+          maxVelocity 8.33
           maxTorque 0.49
         }
       ]
       endPoint DEF WHEEL1 Solid {
-        translation -0.05000489137162684 9.06340572130394e-06 0.06000161495516592
+        translation -0.05000489137162684 9.063405721303895e-06 0.06000161495516592
         rotation 0.7667606948640197 0.45391600128882015 0.45391441989169434 1.833311903914309
         children [
           DEF SH_WHEEL Shape {
@@ -90,7 +90,7 @@ Robot {
       device [
         RotationalMotor {
           name "motor_left"
-          maxVelocity 50
+          maxVelocity 8.33
           maxTorque 0.49
         }
       ]
@@ -125,14 +125,15 @@ Robot {
       name "distance_sensor"
       lookupTable [
         0 0 0
-        0.02 0 0
-        11 1024 0
+        0.03 0 0
+        5 256 0
       ]
       resolution 1
     }
   ]
   boundingObject USE GR_BODY
   physics Physics {
+    density 500
   }
   controller "u2_exam"
 }
