@@ -108,16 +108,16 @@
 
       if (pressed_key == WB_KEYBOARD_UP)
       {
-        wb_motor_set_velocity (wheel_right, -6.28);
-        wb_motor_set_velocity (wheel_left, -6.28);
+        wb_motor_set_velocity (wheel_right, 6.36);
+        wb_motor_set_velocity (wheel_left, -6.36);
         printf ("UP key pressed!\n");
 
       }
 
       else if (pressed_key == WB_KEYBOARD_DOWN)
       {
-        wb_motor_set_velocity (wheel_right, 6.28);
-        wb_motor_set_velocity (wheel_left, 6.28);
+        wb_motor_set_velocity (wheel_right, .2122;
+        wb_motor_set_velocity (wheel_left, .2122);
         printf ("DOWN key pressed!\n");
       }
 

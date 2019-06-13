@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.003006724593899898 -0.9982834959139409 -0.05848949814331818 3.0390466280309822
-  position 0.35260907374229966 0.8909342754387352 -3.1839834404271703
+  orientation -0.022907985490406773 -0.9996670891863066 -0.011871604716632914 0.956522071222813
+  position -0.41733457112329575 0.2697268718080659 0.5589828892942439
 }
 TexturedBackground {
 }
@@ -12,8 +12,8 @@ TexturedBackgroundLight {
 Floor {
 }
 Robot {
-  translation 0.012062699038075102 0.07104350892963399 1.5664329347172739e-09
-  rotation -1.9659416733418178e-07 1.876940876532297e-07 0.9999999999999629 -0.06408411542360215
+  translation 0.007333816523873885 0.07104358393452252 5.6401599898617365e-05
+  rotation -0.0015926891415161497 0.04813881964508368 0.9988393851788568 -0.06415777885812704
   children [
     DEF GR_BODY Group {
       children [
@@ -44,7 +44,7 @@ Robot {
     }
     DEF WHEEL1_JOINT HingeJoint {
       jointParameters HingeJointParameters {
-        position 0.9999999948323461
+        position 1.0690272063390396
         axis 0 0 1
         anchor -0.05 0 0.06
       }
@@ -55,13 +55,13 @@ Robot {
         }
         RotationalMotor {
           name "motor_right"
-          maxVelocity 8.33
+          maxVelocity 50
           maxTorque 0.49
         }
       ]
       endPoint DEF WHEEL1 Solid {
-        translation -0.05 0 0.06
-        rotation 0.7913386724621613 0.4323102844214985 0.432308828789359 1.80272135790949
+        translation -0.05000489137162684 9.06340572130394e-06 0.06000161495516592
+        rotation 0.7667606948640197 0.45391600128882015 0.45391441989169434 1.833311903914309
         children [
           DEF SH_WHEEL Shape {
             appearance DEF A_WHEEL PBRAppearance {
@@ -77,25 +77,26 @@ Robot {
         ]
         boundingObject USE G_WHEEL
         physics Physics {
+          density 500
         }
       }
     }
     DEF WHEEL2 HingeJoint {
       jointParameters HingeJointParameters {
-        position -5.168227623641997e-09
+        position 0.057129380576761826
         axis 0 0 1
         anchor -0.05 0 -0.06
       }
       device [
         RotationalMotor {
           name "motor_left"
-          maxVelocity 8.33
+          maxVelocity 50
           maxTorque 0.49
         }
       ]
       endPoint Solid {
         translation -0.05 0 -0.06
-        rotation -1 2.5841138118209983e-09 -2.58410352886308e-09 1.5708003061004252
+        rotation -0.9991846160335142 -0.02854916433660914 0.028549050730987707 1.5716160225814382
         children [
           Shape {
             appearance USE A_WHEEL
@@ -110,6 +111,7 @@ Robot {
     }
     DistanceSensor {
       translation 0.125 0 0
+      rotation 1 0 0 0.6544996938995746
       children [
         Shape {
           appearance PBRAppearance {
@@ -135,8 +137,8 @@ Robot {
   controller "u2_exam"
 }
 Solid {
-  translation 1.2199999221231974 0.19936615349481107 -7.787680319152741e-08
-  rotation 0.7071067811914212 3.761541348248868e-11 -0.7071067811816738 -6.103621589479274e-07
+  translation 1.2200000083632054 0.1993658818637652 8.363205112598483e-09
+  rotation 0.7071067484123694 4.2641384424649964e-08 -0.707106813960723 -5.531933342873362e-10
   children [
     Shape {
       appearance PBRAppearance {
